@@ -44,7 +44,7 @@ jobs:
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
         with:
-          context: ./src/${{ matrix.service }}/${{ matrix.service }}/src/
-          file: ./src/${{ matrix.service }}/${{ matrix.service }}/src/Dockerfile
+          context: ./src/${{ matrix.service }}/
+          file: ./src/${{ matrix.service }}/Dockerfile
           push: true
           tags: 715841344530.dkr.ecr.eu-central-1.amazonaws.com/workspace/sock-shop/${{ matrix.service }}:latest
